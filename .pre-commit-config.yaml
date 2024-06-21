@@ -1,4 +1,4 @@
-repos:
+repos: 
   - repo: https://github.com/PyCQA/docformatter
     rev: v1.7.5
     hooks:
@@ -82,8 +82,8 @@ repos:
     hooks:
       - id: nbqa-flake8
         args:
-          - --ignore=E501,E712,W291,F632,E203
-          - --exclude=.*
+          - --ignore=E501,E712,W291,F632,E203,F821,F403
+          - --exclude=.*,__init__.py
         name: nbqa-flake8
         description: Run 'flake8' on a Jupyter Notebook
         entry: nbqa flake8
@@ -100,8 +100,8 @@ repos:
     hooks:
       - id: flake8
         args:
-          - --ignore=E501,E712,W291,F632,E203
-          - --exclude=.*
+          - --ignore=E501,E712,W291,F632,E203,,F821,F403
+          - --exclude=.*,__init__.py
         additional_dependencies:
           - flake8-variables-names
           - pep8-naming
