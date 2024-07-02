@@ -194,10 +194,10 @@ repos:
         types_or: [jupyter, markdown]
         additional_dependencies: [pylint]
         args:
-          - --ignore=no_check*,
+          - --ignore=no_check*,__init__.py
           - --max-line-length=79
           - --const-naming-style=any
-          - --disable=E0401,W0104,R0903,C0103
+          - --disable=E0401,W0104,R0903
 
   - repo: https://github.com/pre-commit/mirrors-pylint
     rev: v2.3.1
@@ -209,10 +209,10 @@ repos:
         types: [python]
         args:
           [
-            "--ignore=no_check*",
+            "--ignore=no_check*,__init__.py",
             "--max-line-length=79",
             "--const-naming-style=any",
-            "--disable=E0401,W0104,R0903,C0103",
+            "--disable=E0401,W0104,R0903",
           ]
         additional_dependencies: [pylint]
 
