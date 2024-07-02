@@ -197,7 +197,7 @@ repos:
           - --ignore=no_check*,
           - --max-line-length=79
           - --const-naming-style=any
-          - --disable=E0401,W0104,R0903
+          - --disable=E0401,W0104,R0903,C0103
 
   - repo: https://github.com/pre-commit/mirrors-pylint
     rev: v2.3.1
@@ -212,7 +212,7 @@ repos:
             "--ignore=no_check*",
             "--max-line-length=79",
             "--const-naming-style=any",
-            "--disable=E0401,W0104,R0903",
+            "--disable=E0401,W0104,R0903,C0103",
           ]
         additional_dependencies: [pylint]
 
