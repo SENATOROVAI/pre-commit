@@ -1,4 +1,4 @@
-repos: 
+repos:
   - repo: https://github.com/PyCQA/docformatter
     rev: v1.7.5
     hooks:
@@ -76,6 +76,7 @@ repos:
           - tomli
         args:
           - --ignore-regex=^\s*"image\/(jpeg|png|gif|bmp|tiff)":\s.*
+          - --ignore-regex=[A-Za-z0-9+/]{100,}
           - --skip=*.js,*.html,*.css,*.svg",*.json,*.png,*.jpg,*.yml,*.yaml
   - repo: https://github.com/nbQA-dev/nbQA
     rev: 1.8.5
@@ -127,6 +128,9 @@ repos:
           - types-setuptools
 
         args:
+          # - --cache-dir=/dev/null
+          # - --cache-dir=nul
+          # - --no-incremental
           - --non-interactive
           - --install-types
           - --explicit-package-bases
@@ -145,6 +149,7 @@ repos:
           - --warn-unreachable
           - --warn-redundant-casts
           - --warn-return-any
+          - --disallow-any-explicit
 
 
 
@@ -153,6 +158,9 @@ repos:
     hooks:
       - id: mypy
         args:
+          # - --cache-dir=/dev/null
+          # - --cache-dir=nul
+          # - --no-incremental
           - --non-interactive
           - --install-types
           - --explicit-package-bases
@@ -171,6 +179,7 @@ repos:
           - --warn-unreachable
           - --warn-redundant-casts
           - --warn-return-any
+          - --disallow-any-explicit
 
 
         additional_dependencies:
