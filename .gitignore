@@ -5,8 +5,6 @@ venv
 Thumbs.db
 .mypy_cache
 pre-commit
-*pre-commit
-/pre-commit
 # Logs and databases #
 ######################
 *.log
