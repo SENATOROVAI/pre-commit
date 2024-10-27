@@ -5,7 +5,7 @@ repos:
       - id: docformatter
         args: [--in-place, --wrap-descriptions=79, --style=google]
   - repo: https://github.com/asottile/add-trailing-comma
-    rev: "v3.1.0"
+    rev: "v3.1.0" 
     hooks:
       - id: add-trailing-comma
   - repo: https://github.com/psf/black.git
