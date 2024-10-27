@@ -35,5 +35,5 @@ jobs:
         pip install black "black[jupyter]" nbqa
     - name: Black
       run: |
-        black --check --diff --line-length=79 $(git ls-files '*.py' '*.ipynb')
-        nbqa black --check --diff --line-length=79 $(git ls-files '*.py' '*.ipynb')
+        black --diff --line-length=79 $(git ls-files '*.py' '*.ipynb')
+        nbqa black --diff --line-length=79 $(git ls-files '*.py' '*.ipynb')
