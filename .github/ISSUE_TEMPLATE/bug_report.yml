@@ -7,12 +7,7 @@ body:
       value: >
           <p>Attention! </p>
           <b>We insert an error message from the terminal into the name of the issues!</b>
-
-  - type: markdown
-    attributes:
-      value: >
-        Before requesting please search [existing issues](https://t.me/c/1937296927/3602/25534).
-
+          
   - type: checkboxes
     id: checks
     attributes:
@@ -20,12 +15,10 @@ body:
       description: "Please confirm the following:"
       options:
         - label: I added a descriptive title.
+          required: true 
+        - label: I searched through [existing issues](https://t.me/c/1937296927/3602/25534) and couldn't find a solution or duplicate issue.
           required: true
-        - label: I searched through [existing issues](https://github.com/ContinuumIO/anaconda-issues/issues) and couldn't find a solution or duplicate issue.
-          required: true
-        - label: I searched on the web (e.g. Google) and didn't find any helpful information.
-          required: true
-        - label: I searched the [Anaconda documentation](https://docs.anaconda.com/) and didn't find any helpful information.
+        - label: I searched on the web (e.g. Google) or [chatGPT](https://t.me/c/1937296927/2415/23729) and didn't find any helpful information.
           required: true
           
   - type: input
