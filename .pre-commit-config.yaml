@@ -1,4 +1,4 @@
-repos:
+repos: 
   - repo: https://github.com/PyCQA/docformatter
     rev: "eb1df347edd128b30cd3368dddc3aa65edcfac38"
     hooks:
@@ -33,8 +33,8 @@ repos:
     hooks:
       - id: isort
         args: 
-          - --check 
-          - --float-to-top
+          - --check  
+          - --float-to-top 
   - repo: https://github.com/adamchainz/blacken-docs
     rev: "1.19.1"
     hooks:
@@ -61,8 +61,8 @@ repos:
         types_or: [jupyter, markdown]
         additional_dependencies: [isort]
         args: 
-          - --check 
-          - --float-to-top    
+          - --check  
+          - --float-to-top     
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: "v5.0.0"
