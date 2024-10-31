@@ -35,12 +35,16 @@ repos:
         args: 
           - --check  
           - --float-to-top 
-  - repo: https://github.com/adamchainz/blacken-docs
+  - repo: https://github.com/nbQA-dev/nbQA
     rev: "1.19.1"
     hooks:
-      - id: blacken-docs
-        additional_dependencies:
-          - black==24.2.0
+      - id: nbqa
+        entry: nbqa blacken-docs
+        name: nbqa-blacken-docs
+        alias: nbqa-blacken-docs
+        additional_dependencies: [blacken-docs]
+        args:
+          - --nbqa-md
   - repo: https://github.com/nbQA-dev/nbQA
     rev: 1.9.0
     hooks:
