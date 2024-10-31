@@ -32,7 +32,7 @@ repos:
     rev: "5.13.2"
     hooks:
       - id: isort
-        args: [
+        args: 
           - --check 
           - --float-to-top
   - repo: https://github.com/adamchainz/blacken-docs
@@ -60,6 +60,9 @@ repos:
         require_serial: true
         types_or: [jupyter, markdown]
         additional_dependencies: [isort]
+        args: 
+          - --check 
+          - --float-to-top    
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: "v5.0.0"
