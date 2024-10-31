@@ -32,6 +32,9 @@ repos:
     rev: "5.13.2"
     hooks:
       - id: isort
+        args: [
+          - --check 
+          - --float-to-top
   - repo: https://github.com/adamchainz/blacken-docs
     rev: "1.19.1"
     hooks:
