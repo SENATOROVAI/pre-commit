@@ -1,6 +1,6 @@
 repos:
   - repo: https://github.com/PyCQA/docformatter
-    rev: "eb1df347edd128b30cd3368dddc3aa65edcfac38" 
+    rev: "eb1df347edd128b30cd3368dddc3aa65edcfac38"
     hooks:
       - id: docformatter
         args: [--in-place, --wrap-descriptions=79, --style=google]
@@ -15,7 +15,7 @@ repos:
   - repo: https://github.com/mwouts/jupytext
     rev: "v1.16.4b"
     hooks:
-     - id: jupytext         
+     - id: jupytext
        entry: jupytext
        language: python
        types: [jupyter]
@@ -47,9 +47,10 @@ repos:
     rev: "5.13.2"
     hooks:
       - id: isort
+        entry: isort
         args:
-          - --check
           - --float-to-top
+
   - repo: https://github.com/nbQA-dev/nbQA
     rev: "1.9.0"
     hooks:
@@ -80,7 +81,6 @@ repos:
         types_or: [jupyter, markdown]
         additional_dependencies: [isort]
         args:
-          - --check
           - --float-to-top
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
