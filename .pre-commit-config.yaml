@@ -26,6 +26,8 @@ repos:
          - --pipe=isort - --profile black --filter-files
          - --opt=notebook_metadata_filter=-kernelspec
          - --sync
+         - --pre-commit
+         - --paired-paths
        additional_dependencies:
          - black==22.10.0
          - isort==5.11.5
