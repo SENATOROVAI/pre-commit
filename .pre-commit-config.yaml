@@ -15,7 +15,7 @@ repos:
   - repo: https://github.com/mwouts/jupytext
     rev: "v1.16.4b"
     hooks:
-     - id: jupytext
+     - id: jupytext         
        entry: jupytext
        language: python
        types: [jupyter]
