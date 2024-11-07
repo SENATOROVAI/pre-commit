@@ -29,8 +29,8 @@ repos:
          - --pre-commit
          - --paired-paths
        additional_dependencies:
-         - black==22.10.0
-         - isort==5.11.5
+         - black
+         - isort
        exclude: '.*\.md$'
   - repo: https://github.com/nbQA-dev/nbQA
     rev: 1.9.0
