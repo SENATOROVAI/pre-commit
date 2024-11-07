@@ -13,10 +13,22 @@ repos:
     hooks:
       - id: black
   - repo: https://github.com/mwouts/jupytext
-    rev: v1.14.7 
+    rev: v1.14.1
     hooks:
-    - id: jupytext
-      args: [--sync]
+     - id: jupytext
+       entry: jupytext --to py *.ipynb
+       language: python
+       types: [jupyter]
+       args:
+         - --from=ipynb
+         - --to=py:percent
+         - --pipe=black
+         - --pipe=isort - --profile black --filter-files
+         - --opt=notebook_metadata_filter=-kernelspec
+       additional_dependencies:
+         - black==22.10.0
+         - isort==5.11.5
+       exclude: '.*\.md$'
   - repo: https://github.com/nbQA-dev/nbQA
     rev: 1.9.0
     hooks:
