@@ -33,7 +33,7 @@ jobs:
 
       - name: Convert .ipynb to .py
         run: |
-          jupytext --to py **/*.ipynb
+          jupytext --to py $(git ls-files '*.ipynb')
       - name: Commit and push changes
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
