@@ -22,12 +22,9 @@ repos:
        args:
          - --from=ipynb
          - --sync
-         - --pipe=isort
          - --to=py:percent
          - --opt=notebook_metadata_filter=-kernelspec
          - --set-formats=ipynb,py:percent
-       additional_dependencies:
-         - isort
        exclude: '.*\.md$'
   - repo: https://github.com/nbQA-dev/nbQA
     rev: 1.9.0
