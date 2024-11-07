@@ -30,7 +30,8 @@ jobs:
         pip install isort nbqa
     - name: isort
       run: |
-        nbqa isort --check --float-to-top $(git ls-files '*.ipynb')
+        nbqa isort --float-to-top $(git ls-files '*.ipynb')
+        isort --float-to-top $(git ls-files '*.py')
     - name: Commit and push changes
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
