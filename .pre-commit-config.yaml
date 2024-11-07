@@ -21,11 +21,11 @@ repos:
        types: [jupyter]
        args:
          - --from=ipynb
-         - --sync
          - --to=py:percent
          - --opt=notebook_metadata_filter=-kernelspec
          - --set-formats=ipynb,py:percent
          - --quiet
+         - --sync
        exclude: '.*\.md$'
   - repo: https://github.com/nbQA-dev/nbQA
     rev: 1.9.0
