@@ -47,8 +47,8 @@ jobs:
         git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}
         git pull
         git add .
-        git commit -m "Convert notebooks to Python scripts"
-        git push
+        git diff --quiet || (git commit -m "Convert notebooks to Python scripts" && git push)
+
 
 
 
