@@ -16,20 +16,17 @@ repos:
     rev: "v1.16.4b"
     hooks:
      - id: jupytext
-       entry: jupytext --to py *.ipynb
+       entry: jupytext
        language: python
        types: [jupyter]
        args:
          - --from=ipynb
-         - --to=py:percent
-         - --pipe=black
-         - --pipe=isort - --profile black --filter-files
-         - --opt=notebook_metadata_filter=-kernelspec
          - --sync
-         - --pre-commit
-         - --paired-paths
+         - --pipe=isort
+         - --to=py:percent
+         - --opt=notebook_metadata_filter=-kernelspec
+         - --set-formats=ipynb,py:percent
        additional_dependencies:
-         - black
          - isort
        exclude: '.*\.md$'
   - repo: https://github.com/nbQA-dev/nbQA
