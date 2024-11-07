@@ -1,0 +1,9 @@
+# В Jupytext настройка formats = "ipynb,py:percent" в файле jupytext.toml означает, что все Jupyter ноутбуки (.ipynb) в указанной папке будут автоматически синхронизироваться с Python скриптами (.py) в формате "percent". В этом формате ячейки кода обозначаются через # %% в .py файлах. Это упрощает редактирование ноутбуков в текстовом виде и использование контроля версий.
+#formats = "ipynb,py:percent"  
+
+#[tool.jupytext]
+#formats = "ipynb,py:percent"
+
+[tool.jupytext.formats]
+"notebooks/" = "ipynb"
+"scripts/" = "py:percent"
