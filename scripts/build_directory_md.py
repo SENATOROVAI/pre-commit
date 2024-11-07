@@ -1,11 +1,7 @@
 #!/usr/bin/env python3
 """module."""
-
-
 import os
 from collections.abc import Iterator
-
-
 def good_file_paths(top_dir: str = ".") -> Iterator[str]:
     """SENATOROV."""
     for dir_path, dir_names, filenames in os.walk(top_dir):
