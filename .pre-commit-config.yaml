@@ -8,9 +8,8 @@ repos:
        types: [jupyter]
        args:
          - --from=ipynb
-         - --to=py:percent
-         - --opt=notebook_metadata_filter=-kernelspec
-         - --set-formats=ipynb,py:percent
+         - --to=py:light
+         - --set-formats=ipynb,py:light
          - --quiet
          - --sync
          - --warn-only
