@@ -238,3 +238,5 @@ target/
 *.env  # Environment variable files
 coverage/
 .pre-commit-config.yaml
+DIRECTORY.md
+README.md
