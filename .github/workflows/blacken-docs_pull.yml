@@ -3,10 +3,10 @@ name: "SENATOROV"
 permissions:
   contents: write  # Grant write access to the repository contents
 on:
-  push:
+ 
+  pull_request:
     branches:
       - "**"
-   
   schedule:
     - cron: "0 0 * * *" # Run every day
   workflow_dispatch:
@@ -14,10 +14,11 @@ on:
   delete:
   release:
   issues:
- 
+  pull_request_review:
+  pull_request_review_comment:
 
 jobs:
-  flake8:
+  blacken-docs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -29,8 +30,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install flake8 nbqa flake8-variables-names pep8-naming flake8-functions-names
-    - name: Flake8
+        pip install blacken-docs nbqa
+    - name: Blacken-docs
       run: |
-        nbqa flake8 --ignore=B018,E203,E501,W291,F821,F401,E402,E121,E302,W391,W293 $(git ls-files '*.py' '*.ipynb')
-        flake8 --ignore=B018,E203,E501,W291,F821,F401,E402,E121,E302,W391,W293 $(git ls-files '*.py' '*.ipynb')
+         nbqa blacken-docs --nbqa-md --nbqa-diff $(git ls-files '*.py' '*.ipynb')
