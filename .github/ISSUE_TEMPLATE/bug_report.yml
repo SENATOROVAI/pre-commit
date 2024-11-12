@@ -1,5 +1,4 @@
 name: Bug report
-description: Create a bug report to help us address errors in the repository
 title: "[BUG]"
 labels: [bug]
 body:
