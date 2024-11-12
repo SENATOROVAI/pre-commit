@@ -1,4 +1,5 @@
 name: Other
+title: "[OTHER]"
 description: Use this for any other issues. PLEASE do not create blank issues
 labels: ["awaiting triage"]
 body:
