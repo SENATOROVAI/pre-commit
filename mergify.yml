@@ -1,0 +1,13 @@
+pull_request_rules:
+  - name: automatic merge when all required checks pass
+    conditions:
+      - "check-success=pylint"        # Условие: все обязательные проверки прошли успешно
+      - "label!=work-in-progress"   # Исключает PR с меткой "work-in-progress"
+      - "base=main"                 # Работает для pull-реквестов, направленных в основную ветку
+    actions:
+      merge:
+        method: merge               # Метод слияния "merge"
+      delete_head_branch:            # Удаляет ветку после слияния
+        force: true                  # Принудительное удаление, если ветка защищена 
+
+ 
