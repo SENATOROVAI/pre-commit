@@ -7,7 +7,7 @@ pull_request_rules:
     actions:
       merge:
         method: merge               # Метод слияния "merge"
-      delete_head_branch:            # Удаляет ветку после слияния
-        force: true                  # Принудительное удаление, если ветка защищена 
+      # delete_head_branch:            # Удаляет ветку после слияния
+      #   force: true                  # Принудительное удаление, если ветка защищена 
 
  
